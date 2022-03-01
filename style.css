@@ -65,6 +65,11 @@ i{
 }
 
 
+#footer{
+    /*align-items:flex-end*/
+}
+
+
 #subfooter1 {
     align-items: center;
 }
