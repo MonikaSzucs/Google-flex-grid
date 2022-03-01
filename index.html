@@ -11,21 +11,34 @@
     <div id="main">
         <div id="left" class="block__item">
             <ul>
-                <li>About</li>
-                <li>Store</li>
+                <li class="underscore">About</li>
+                <li class="underscore">Store</li>
             </ul>
         </div>
         <div id="googleCenter" class="block__item">
-            <span id="content1">Google</span>
-            <span id="content2"><input/></span>
-            <span id="content3"><button>Button1</button><button>Button2</button></span>
-            <span>Google offered in: Français</span>
+            <span id="content1"><img id="logo" src="./Images/Google-Logo-Color.png" alt="Paris" width="300" height="300"></span>
+            <span id="content2">
+                <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+                <input/>
+                <img id="microphone" src="./Images/Microphone.png" alt="Paris" width="300" height="300">
+            </span>
+            <span id="content3">
+                <button id="button1" >Google Search</button>
+                <button id="button2">I'm Feeling Lucky</button>
+            </span>
+            <span id="language">Google offered in: <i><span id="language-item">Français</span></i></span>
         </div>
         <div class="right" class="block__item">
             <ul>
-                <il>Gmail</il>
-                <il>Images</il>
+                <il class="underscore">Gmail</il>
+                <il class="underscore">Images</il>
                 <li><i class="fa-solid fa-bars fa-2xl"></i></li>
+                <li>
+                    <label class="switch" >
+                        <input type="checkbox" id="switch">
+                        <span class="slider round"></span>
+                    </label>
+                </li>
             </ul>
         </div>
         <div id="footer" class="block__item">
@@ -37,20 +50,44 @@
             <div id="subfooter2">
                 <div class="left">
                     <ul>
-                        <li>Advertising</li>
-                        <li>Business</li>
-                        <li>How Search works</li>
+                        <li class="underscore">Advertising</li>
+                        <li class="underscore">Business</li>
+                        <li class="underscore">How Search works</li>
                     </ul>
                 </div>
                 <div class="right">
                     <ul>
-                        <li>Privacy</li>
-                        <li>Terms</li>
-                        <li>Settings</li>
+                        <li class="underscore">Privacy</li>
+                        <li class="underscore">Terms</li>
+                        <li class="underscore">Settings</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        var toggleItem = document.getElementById("switch");
+        var isDark = true;
+
+        toggleItem.onclick = function () {
+            if(isDark){
+                isDark = false;
+                alert("It is Dark")
+                document.getElementById("main").style.color = "#fff";
+                document.body.style.backgroundColor = "#333";
+                document.getElementById("footer").style.backgroundColor = "#171717";
+                document.getElementById("logo").src="images/Google-Logo-White.png";
+                
+            }
+            else{
+                isDark = true;
+                alert("Light")
+                document.getElementById("main").style.color = "#333";
+                document.body.style.backgroundColor = "#fff";
+                document.getElementById("footer").style.backgroundColor = "#fff";
+                document.getElementById("logo").src="images/Google-Logo-Color.png";
+            }
+        }
+    </script>
 </body>
 </html>
