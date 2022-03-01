@@ -64,11 +64,9 @@ i{
     white-space: pre;
 }
 
-
 #footer{
-    /*align-items:flex-end*/
+    width: 100%;
 }
-
 
 #subfooter1 {
     align-items: center;
