@@ -13,13 +13,16 @@ body{
 }
 
 .container {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    justify-content: space-between;
 }
+
 
 ul {
     list-style-type: none;
+    display: flex;
+    gap: 30px;
+    margin: 10px;
 }
 
 a{
@@ -29,4 +32,6 @@ a{
 i{
     color:#333;
     background-color: #333;
+    align-items: end;
 }
+
